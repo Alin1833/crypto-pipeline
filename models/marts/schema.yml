@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: mart_daily_prices
+    description: "Preturi zilnice agregate per moneda crypto"
+    columns:
+      - name: coin_id
+        description: "Numele monedei"
+        tests:
+          - not_null
+      - name: price_date
+        description: "Data agregarii"
+        tests:
+          - not_null
+      - name: price_min
+        description: "Pretul minim din ziua respectiva"
+        tests:
+          - not_null
+      - name: price_avg
+        description: "Pretul mediu din ziua respectiva"
+        tests:
+          - not_null
